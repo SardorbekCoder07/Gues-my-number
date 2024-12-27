@@ -10,3 +10,6 @@ resetBtn.addEventListener('click',()=>{
 	count=0;
 	input.value=count;
 })
+
+
+
