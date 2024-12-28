@@ -124,12 +124,12 @@ let globalVar = "I am a global variable"
 // console.log(myLetVar)
 // let myLetVar = "Hello!"
 
-function testTDZ() {
-	console.log(myVar)
-	var myVar = "var hoisted"
+// function testTDZ() {
+// 	console.log(myVar)
+// 	var myVar = "var hoisted"
 
-	let myLetVar = "let TDZ"
-	console.log(myLetVar)
-}
+// 	let myLetVar = "let TDZ"
+// 	console.log(myLetVar)
+// }
 
-testTDZ()
+// testTDZ()
