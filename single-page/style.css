@@ -1,0 +1,277 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;500&family=Poppins:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-padding-top: 2rem;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+:root {
+	--main-color: #fd4646;
+	--text-color: #171427;
+	--bg-color: #fff;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	color: var(--text-color);
+}
+
+.container {
+	max-width: 1068px;
+	margin: auto;
+	width: 100%;
+	padding: 10px;
+}
+
+section {
+	padding: 4rem 0 3rem;
+}
+
+/* Header */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--bg-color);
+	box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+	z-index: 100;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 10px;
+}
+
+.logo {
+	font-size: 1.1rem;
+	color: var(--text-color);
+	font-weight: 400;
+}
+
+#card-icon {
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+/* Card */
+.card {
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 360px;
+	min-height: 100vh;
+	padding: 20px;
+	background: var(--bg-color);
+	box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+	transition: 0.3s;
+}
+
+.card.active {
+	right: 0;
+	overflow-y: scroll;
+	height: 100%;
+}
+
+.card-title {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-top: 2rem;
+}
+
+.card-box {
+	display: grid;
+	grid-template-columns: 32% 50% 18%;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.card-img {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	padding: 10px;
+}
+
+.detail-box {
+	display: grid;
+	row-gap: 0.5rem;
+}
+
+.card-product-title {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.card-price {
+	font-weight: 500;
+}
+
+.card-quantity {
+	border: 1px solid var(--text-color);
+	outline-color: var(--main-color);
+	width: 2.4rem;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.card-remove {
+	font-size: 24px;
+	color: var(--main-color);
+	cursor: pointer;
+}
+
+.total {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1.5rem;
+	border-top: 1px solid var(--text-color);
+}
+
+.total-title {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.total-price {
+	margin-left: 0.5rem;
+}
+
+.btn-buy {
+	display: flex;
+	margin: 1.5rem auto 0 auto;
+	padding: 12px 20px;
+	border: none;
+	background: var(--main-color);
+	color: var(--bg-color);
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.btn-buy:hover {
+	background: var(--text-color);
+	transition: 0.3s;
+}
+
+#close-card {
+	position: absolute;
+	top: 1rem;
+	right: 0.8rem;
+	font-size: 2rem;
+	color: var(--text-color);
+	cursor: pointer;
+}
+
+.section-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.shop {
+	margin-top: 2rem;
+}
+
+/* Shop-Content */
+.shop-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+	gap: 1.5rem;
+}
+
+.product-box {
+	position: relative;
+}
+
+.product-box:hover {
+	padding: 8px;
+	border: 1px solid var(--text-color);
+	transition: 0.4s;
+	border: none;
+}
+
+.product-img {
+	width: 100%;
+	height: 75%;
+	margin-bottom: 0.5rem;
+	object-fit: cover;
+	object-position: center;
+}
+
+.product-title {
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+
+.price {
+	font-weight: 500;
+}
+
+.add-card {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: var(--text-color);
+	color: var(--bg-color);
+	padding: 10px;
+	cursor: pointer;
+}
+
+.add-card:hover {
+	background: hsl(249, 32%, 17%);
+}
+
+/* Breakpoints / Making Responsive */
+@media (max-widtg: 1080px) {
+	.nav {
+		padding: 15px;
+	}
+	section {
+		padding: 3rem 0 2rem;
+	}
+	.container {
+		margin: 0 auto;
+		width: 90%;
+	}
+	.shop {
+		margin-top: 2rem !important;
+	}
+}
+
+@media (max-widtg: 400px) {
+	.nav {
+		padding: 11px;
+	}
+	.logo {
+		font-size: 1rem;
+	}
+	.card {
+		width: 320px;
+	}
+}
+
+@media (max-widtg: 400px) {
+	.shop {
+		margin-top: 1rem !important;
+	}
+	.card {
+		width: 280px;
+	}
+}
